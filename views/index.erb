@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Show images</title>
+</head>
+<body>
+<% @filenames.each {|filename| filename.gsub!('./public/', '')} %>
+<%= @filenames %>
+<ul>
+  <% @filenames.each do |filename| %>
+      <li><img src="<%= filename %>" /></li>
+  <% end %>
+</ul>
+</body>
+</html>
